@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-21 16:12:55
- * @LastEditTime: 2021-06-23 10:41:03
+ * @LastEditTime: 2021-06-23 14:34:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /upyun-tool/src/main/index.js
@@ -30,9 +30,9 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 563,
+    height: 900,
     useContentSize: true,
-    width: 1000
+    width: 1600
   })
   if (process.env.NODE_ENV === 'development') {
     mainWindow.webContents.on('did-frame-finish-load', () => {

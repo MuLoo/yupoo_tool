@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-21 16:44:18
- * @LastEditTime: 2021-06-23 10:46:09
+ * @LastEditTime: 2021-06-23 14:35:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /upyun-tool/src/renderer/page/parse.vue
@@ -16,7 +16,7 @@
             <h3>通过链接解析用户名</h3>
             <div class="part">
                 <h4>输入待解析链接</h4>
-                <a-textarea v-model="text" placeholder="Basic usage" :rows="6" />
+                <a-textarea v-model="text" placeholder="待解析的yupoo链接" :rows="6" />
                 <div class="buttonArea">
                   <a-button type="primary" :disabled="!text.length" @click="startParse">解析</a-button>
                   <a-button @click="() => { this.text = '';this.init() }">重置</a-button>
