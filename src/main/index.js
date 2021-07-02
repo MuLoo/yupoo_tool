@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-21 16:12:55
- * @LastEditTime: 2021-06-23 14:34:01
+ * @LastEditTime: 2021-07-02 16:30:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /upyun-tool/src/main/index.js
@@ -42,6 +42,7 @@ function createWindow () {
       mainWindow.webContents.openDevTools()
     })
   }
+  // mainWindow.webContents.openDevTools()
   mainWindow.loadURL(winURL)
 
   mainWindow.on('closed', () => {
@@ -54,6 +55,8 @@ app.on('ready', createWindow)
 // 系统内右键功能
 const menu = new Menu()
 menu.append(new MenuItem({ label: '刷新', role: 'reload' }))
+menu.append(new MenuItem({ label: '复制', accelerator: 'CmdOrCtrl+C', selector: 'copy:', role: 'copy' }))
+menu.append(new MenuItem({ label: '粘贴', accelerator: 'CmdOrCtrl+V', selector: 'paste:', role: 'paste' }))
 menu.append(new MenuItem({ type: 'separator' }))
 menu.append(new MenuItem({ label: '全屏', role: 'togglefullscreen' }))
 app.on('browser-window-created', (event, win) => {
